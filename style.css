@@ -1,0 +1,185 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* header -------------------------------------------------------------*/
+
+.header {
+    background-color: #E506AA;
+}
+
+.header-padding {
+    padding: 20px 0;
+}
+
+
+.header a {
+    color: white;
+    font-size: 12px;
+
+}
+
+.header .header-logo a{
+    font-size: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.header nav {
+    display: flex;
+    gap: 24px;
+
+}
+
+.header nav a{
+    transition: 0.3s;
+}
+
+.header nav a:hover{
+    color: #e4c3dc;
+    transform: translateY(-2px);
+}
+
+
+/* hero------------------------------------- */
+
+.hero-background {
+    min-height: 100vh;
+
+}
+
+.hero .hero-background {
+    background-image: url("figma-export/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-padding {
+    
+    padding: 150px 0;
+
+    color: white;
+}
+
+.hero-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.hero .hero-title h1{
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    font-size: 90px;
+}
+.hero-title{
+    max-width: 550px;
+    height: 80px;
+}
+
+.hero-button{
+    height: 35px;
+    width: 290px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    background-color: #E506AA;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    
+}
+
+.hero-button:hover{
+    transform: translateY(-3px);
+}
+
+
+/* about------------------------------------ */
+
+.about-padding{
+    padding: 80px 0;
+    
+}
+
+.about-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-img{
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content-title{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.about-content-text{
+    width: 300px;
+}
+
+.about-content-button{
+    width: 150px;
+    height: 25px;
+    background: #E506AA;
+    color: white;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    
+}
+
+.about-content-button:hover{
+    transform: translateY(-3px)
+}
