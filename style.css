@@ -108,9 +108,12 @@ body {
 }
 
 .hero-button{
-    height: 35px;
+    height: 25px;
     width: 290px;
     color: white;
+
+    font-size: 14px;
+    
 
     display: flex;
     justify-content: center;
@@ -155,18 +158,21 @@ body {
     gap: 30px;
 }
 
-.title-h2{
-    font-size: 18px;
+.title-pink{
+    font-family:"Alex Brush", cursive;
+    color: #E506AA;
+    font-size: 32px;
     font-weight: 400;
+    
 }
 
-
+ 
 
 .about-content-text{
     width: 500px;
 }
 
-.about-content-button{
+.button-pink{
     width: 200px;
     height: 25px;
     background: #E506AA;
@@ -202,13 +208,6 @@ body {
     gap: 20px;
 }
 
-.top-places-title h2{
-    font-family: "Alex Brush", cursive;
-    font-weight: 400;
-    font-size: 32px;
-    color: #E506AA;
- 
-}
 
 .top-places-action a{
     color: #333;
@@ -258,12 +257,6 @@ body {
     padding: 20px 0;
 }
 
-.experiences-header h2{
-    font-family: "Alex Brush", cursive;
-    
-    font-size: 32px;
-    color: #E506AA;
-}
 
 .experiences .experiences-cards{
     display: grid;
@@ -273,7 +266,7 @@ body {
 
 .experiences .card{
     width: 100%;
-    height: 350px;
+    height: 450px;
     color: white;
     padding: 30px;
 
@@ -283,12 +276,13 @@ body {
 }
 
 .experiences .card-one{
-    background-image: url("figma-export/best-experiences/MEJORES-PLAYAS.jpg");
+    background-image: url("figma-export/best-experiences/mountains.jpg");
     background-size: cover;
 }
 
 .experiences .card-two{
-    background-image: url("figma-export/best-experiences/mountains.jpg");
+    background-image: url("figma-export/best-experiences/MEJORES-PLAYAS.jpg");
+    background-size: cover;
 }
 
 .experiences .card h3{
@@ -298,4 +292,97 @@ body {
 
 .experiences .card p{
     font-size: 14px;
+}
+
+/* background-section */
+
+.background-section{
+    background-image: url(figma-export/section-big-foto-island.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 700px;
+
+    margin: 100px 0;
+}
+
+/* text */
+
+.text{
+    padding: 100px 0;
+}
+
+.text-flex-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.text h2{
+    font-family:"Alex Brush", cursive;
+    color: #E506AA;
+    font-size: 32px;
+}
+
+.text p{
+    max-width: 700px;
+    
+}
+
+/* gallery */
+
+.gallery{
+    padding: 80px 0;
+    position: relative;
+}
+
+.gallery .gallery-background{
+    background: #e4c3dc;
+    width: 100%;
+    height: 300px;
+    padding: 200px;
+
+    position: absolute;
+    left: 0;
+    top: 280px;
+    z-index: 0;
+   
+}
+
+.gallery .container{
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 5px;
+}
+
+.gallery .card img{
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    
+}
+
+.card-one{
+    grid-row: 1 / 3;
+
+}
+
+.card-two{
+    grid-column: 2 / 4;
+}
+
+.card-five{
+    grid-row: 2 / 4;
 }
