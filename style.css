@@ -71,7 +71,7 @@ body {
 
 .hero-background {
     min-height: 100vh;
-
+    margin-bottom: 160px;
 }
 
 .hero .hero-background {
@@ -91,7 +91,7 @@ body {
 .hero-flex{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: space-between;
     gap: 40px;
 }
 
@@ -138,7 +138,7 @@ body {
 
 .about-flex{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
@@ -155,17 +155,19 @@ body {
     gap: 30px;
 }
 
-.about-content-title{
-    font-size: 17px;
+.title-h2{
+    font-size: 18px;
     font-weight: 400;
 }
 
+
+
 .about-content-text{
-    width: 300px;
+    width: 500px;
 }
 
 .about-content-button{
-    width: 150px;
+    width: 200px;
     height: 25px;
     background: #E506AA;
     color: white;
@@ -182,4 +184,118 @@ body {
 
 .about-content-button:hover{
     transform: translateY(-3px)
+}
+
+/* top-places */
+
+.top-places{
+    display: flex;
+    flex-direction: column;
+    padding: 180px 0;
+    gap: 20px;
+}
+
+.top-places-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-places-title h2{
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-size: 32px;
+    color: #E506AA;
+ 
+}
+
+.top-places-action a{
+    color: #333;
+}
+
+.top-places-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+}
+
+.top-places .card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.top-places .card h3{
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.top-places .card p{
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+/* experiences */
+
+.experiences{
+    padding: 150px 0;
+}
+
+.experiences-header{
+    padding: 20px 0;
+}
+
+.experiences-header h2{
+    font-family: "Alex Brush", cursive;
+    
+    font-size: 32px;
+    color: #E506AA;
+}
+
+.experiences .experiences-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.experiences .card{
+    width: 100%;
+    height: 350px;
+    color: white;
+    padding: 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.experiences .card-one{
+    background-image: url("figma-export/best-experiences/MEJORES-PLAYAS.jpg");
+    background-size: cover;
+}
+
+.experiences .card-two{
+    background-image: url("figma-export/best-experiences/mountains.jpg");
+}
+
+.experiences .card h3{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.experiences .card p{
+    font-size: 14px;
 }
