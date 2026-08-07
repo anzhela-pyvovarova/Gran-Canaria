@@ -21,22 +21,46 @@ body {
     padding: 0 70px;
 }
 
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 /* header -------------------------------------------------------------*/
 
 .header {
     background-color: #E506AA;
+
+    /* sticky */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* trransition чтобы цвет менялся плавно */
+    transition: background-color 0.3 ease;
 }
 
 .header-padding {
     padding: 20px 0;
 }
 
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* для изменения цвета. для java script */
+.header.scrolled{
+    background-color: rgba(251, 239, 244, 0.9);
+    
+}
+
+.header.scrolled .header-logo a {
+    color: #E506AA;
+    text-shadow: none;
+}
+
+.header.scrolled .nav a{
+     color: #E506AA;
+}
 
 .header a {
     color: white;
@@ -69,21 +93,30 @@ body {
 
 /* hero------------------------------------- */
 
-
+.hero{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    
+}
 
 .hero .hero-background {
     background-image: url("figma-export/hero-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    height: 700px;
-    margin-bottom: 160px;
+    z-index: -1;
+    
+    position: absolute;
+    inset: 0;
+   
 }
+
+
 
 .hero-padding {
     
-    padding: 150px 0;
+    padding-top: 250px;
 
     color: white;
 }
@@ -135,7 +168,7 @@ body {
 /* about------------------------------------ */
 
 .about-padding{
-    padding: 80px 0;
+    padding: 150px 0;
     
 }
 
@@ -197,7 +230,7 @@ body {
 .top-places{
     display: flex;
     flex-direction: column;
-    padding: 180px 0;
+    /* padding: 180px 0; */
     gap: 20px;
 }
 
@@ -211,6 +244,7 @@ body {
 
 .top-places-action a{
     color: #333;
+    font-size: 12px;
 }
 
 .top-places-cards{
@@ -225,9 +259,16 @@ body {
     height: 320px;
     object-fit: cover;
     display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 
+        transform 0.3s ease;
 }
 
-.card{
+.top-places .card img:hover{
+    transform: translateY(-5px);
+}
+
+.top-places-section .card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,14 +278,15 @@ body {
 
 
 .top-places .card h3{
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 24px;
+    
 
 }
 
 .top-places .card p{
-    font-size: 14px;
-    margin-top: -10px;
+    font-size: 12px;
+    margin-top: -20px;
+    color: #E506AA;
 }
 
 /* experiences */
@@ -271,27 +313,36 @@ body {
     padding: 30px;
 
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     gap: 5px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: 
+        transform 0.3s ease;
 }
 
-.experiences .card-one{
+.experiences .card:hover{
+    transform: translateY(-5px);
+}
+
+.experiences .experiences-card-one{
     background-image: url("figma-export/best-experiences/mountains.jpg");
     background-size: cover;
 }
 
-.experiences .card-two{
+.experiences .experiences-card-two{
     background-image: url("figma-export/best-experiences/MEJORES-PLAYAS.jpg");
     background-size: cover;
 }
 
 .experiences .card h3{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .experiences .card p{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* background-section */
@@ -366,7 +417,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 300px;
-    gap: 5px;
+    gap: 10px;
 }
 
 .gallery .card img{
@@ -380,9 +431,15 @@ body {
 
 .gallery .card{
     position: relative;
+    transition: 
+        transform 0.3s ease;
 }
 
-.card h3{
+.gallery .card:hover{
+    transform: translateY(-5px);
+}
+
+.gallery .card h3{
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -392,17 +449,17 @@ body {
     font-size: 14px;
 }
 
-.card-one{
+.gallery .card-one{
     grid-row: 1 / 3;
     
 }
 
-.card-two{
+.gallery .card-two{
     grid-column: 2 / 4;
     
 }
 
-.card-five{
+.gallery .card-five{
     grid-row: 2 / 4;
 }
 
@@ -413,12 +470,12 @@ body {
     margin-top: 80px;
     background: #E506AA;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 50px;
+    gap: 30px;
     justify-items: center;
 }
 

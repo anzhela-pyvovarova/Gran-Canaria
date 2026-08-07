@@ -31,23 +31,23 @@
 
     <section class="hero">
         <div class="hero-background">
-
-            <div class="container">
-                <div class="hero-padding hero-flex">
-                    <div class="hero-title">
-                        <h1>Gran Canaria</h1>
-                    </div>
-                    <div class="hero-text">
-                        <p>Discover the island of endless sunshine,<br>
-                            dramatic landscapes and unforgettable beaches.</p>
-                    </div>
-
-                    <a class="hero-button" href="#">Explore the Island</a>
-
-                </div>
-            </div>
-
         </div>
+        <div class="container">
+            <div class="hero-padding hero-flex hero-content">
+                <div class="hero-title">
+                    <h1>Gran Canaria</h1>
+                </div>
+                <div class="hero-text">
+                    <p>Discover the island of endless sunshine,<br>
+                        dramatic landscapes and unforgettable beaches.</p>
+                </div>
+
+                <a class="hero-button" href="#">Explore the Island</a>
+
+            </div>
+        </div>
+
+
     </section>
 
     <section class="about">
@@ -88,23 +88,23 @@
                     <div class="card">
                         <img src="figma-export/top-places/maspalomas.jpg" alt="Maspalomas Dunes">
 
-                        <h3>Maspalomas Dunes</h3>
+                        <h3 class="title-pink">Maspalomas Dunes</h3>
                         <p>Golden sand dunes</p>
 
                     </div>
                     <div class="card">
                         <img src="figma-export/top-places/roque-nublo.jpg" alt="Roque Nublo">
-                        <h3>Roque Nublo</h3>
+                        <h3 class="title-pink">Roque Nublo</h3>
                         <p>An iconic volcanic</p>
                     </div>
                     <div class="card">
                         <img src="figma-export/top-places/puerto-mogan.jpg" alt="Puerto de Mogan">
-                        <h3>Puerto de Mogan</h3>
+                        <h3 class="title-pink">Puerto de Mogan</h3>
                         <p>A colourful village</p>
                     </div>
                     <div class="card">
                         <img src="figma-export/top-places/amadores.jpg" alt="Amadores Beach">
-                        <h3>Amadores Beach</h3>
+                        <h3 class="title-pink">Amadores Beach</h3>
                         <p>A sheltered bay</p>
                     </div>
                 </div>
@@ -121,12 +121,12 @@
 
             <div class="experiences-cards">
 
-                <div class="card card-one">
+                <div class="card experiences-card-one">
 
                     <h3>Mountain Adventures</h3>
                     <p>Explore scenic hiking trails through breathaking volcanic landscapes</p>
                 </div>
-                <div class="card card-two">
+                <div class="card experiences-card-two">
 
                     <h3>Crystal Beaches</h3>
                     <p>Relax on golden sands and swim in the clear turquoise waters </p>
@@ -224,7 +224,36 @@
 
     </footer>
 
+    <!-- stiky header -->
+    <script>
+        const header =
+            document.querySelector('.header')
 
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+        });
+    </script>
+
+    <script>
+        const heroBackground = document.querySelector('.hero-background');
+        const heroContent = document.querySelector('.hero-content');
+
+        window.addEventListener('scroll', function () {
+
+            const scroll = window.scrollY;
+
+            heroBackground.style.transform = `translateY(${scroll * 0.3}px)`;
+
+            
+
+            heroContent.style.opacity = 1 - scroll / 500;
+        });
+    </script>
 </body>
 
 </html>
